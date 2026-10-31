@@ -1,0 +1,475 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Коммерческое предложение: ROI обучения для Газпром Теплоэнерго МО</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            background: #f9f9f9;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .pdf-container {
+            max-width: 950px;
+            width: 100%;
+            background: white;
+            padding: 45px 55px 50px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            border-radius: 8px;
+        }
+        .header-badge {
+            display: inline-block;
+            background: #e6f0fa;
+            color: #2a7de1;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 6px 12px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 800;
+            color: #0a1a3a;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+        .subhead {
+            font-size: 15px;
+            color: #555;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+        .intro {
+            background: #f2f6fe;
+            padding: 20px 25px;
+            border-radius: 8px;
+            border-left: 6px solid #2a7de1;
+            font-size: 15px;
+            line-height: 1.7;
+            color: #1a2a4a;
+            margin-bottom: 30px;
+        }
+        .stats-row {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 35px;
+        }
+        .stat-box {
+            flex: 1;
+            background: #f8fbfe;
+            border: 1px solid #d0e1f3;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+        }
+        .stat-box .number {
+            font-size: 24px;
+            font-weight: 800;
+            color: #2a7de1;
+            margin-bottom: 5px;
+        }
+        .stat-box .text {
+            font-size: 13px;
+            color: #444;
+            line-height: 1.4;
+        }
+        .section-title {
+            font-size: 20px;
+            font-weight: 800;
+            color: #0a1a3a;
+            border-bottom: 2px solid #2a7de1;
+            padding-bottom: 8px;
+            margin: 35px 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section-title .num {
+            background: #2a7de1;
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 15px;
+        }
+        p {
+            font-size: 14.5px;
+            line-height: 1.7;
+            color: #222;
+            margin-bottom: 15px;
+        }
+        ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        li {
+            font-size: 14.5px;
+            line-height: 1.7;
+            color: #222;
+            margin-bottom: 8px;
+        }
+        .table-wrap {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            border: 1px solid #d0dbe8;
+        }
+        th {
+            background: #0a1a3a;
+            color: white;
+            padding: 12px 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e0e0e0;
+            line-height: 1.5;
+            vertical-align: top;
+        }
+        tr:nth-child(even) td {
+            background: #f6f9fc;
+        }
+        .value-box {
+            background: #fff4e5;
+            border-left: 4px solid #f5a623;
+            padding: 15px 20px;
+            margin: 20px 0;
+            font-size: 14.5px;
+            line-height: 1.6;
+            color: #333;
+            border-radius: 0 6px 6px 0;
+        }
+        .value-box strong {
+            color: #d48a00;
+        }
+        .tariff-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 25px;
+        }
+        .tariff-card {
+            width: 100%;
+            max-width: 800px;
+            background: #f6fbf8;
+            border: 2px solid #0d6e2d;
+            border-radius: 8px;
+            padding: 35px 40px;
+            box-shadow: 0 4px 20px rgba(13, 110, 45, 0.1);
+            position: relative;
+        }
+        .tariff-card::before {
+            content: "Инвестиция в надежность бизнеса";
+            position: absolute;
+            top: -14px;
+            left: 30px;
+            background: #0d6e2d;
+            color: white;
+            font-size: 13px;
+            font-weight: bold;
+            padding: 6px 15px;
+            border-radius: 10px;
+        }
+        .tariff-card h2 {
+            font-size: 24px;
+            font-weight: 800;
+            color: #0d6e2d;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #b8e6c8;
+            padding-bottom: 15px;
+        }
+        .tariff-card ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 15px;
+            margin-bottom: 25px;
+        }
+        .tariff-card ul li {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #1a3a2a;
+            padding-left: 24px;
+            position: relative;
+            margin-bottom: 12px;
+        }
+        .tariff-card ul li::before {
+            content: "✓";
+            color: #0d6e2d;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 16px;
+        }
+        .price {
+            font-size: 32px;
+            font-weight: 800;
+            color: #0a1a3a;
+        }
+        .price-desc {
+            font-size: 14px;
+            color: #555;
+            margin-top: 8px;
+        }
+        a {
+            color: #2a7de1;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .conclusion-block {
+            margin-top: 35px;
+            padding: 25px 30px;
+            border-radius: 8px;
+            border-left: 6px solid #2a7de1;
+            background: #f2f6fe;
+        }
+        .conclusion-block h2 {
+            font-size: 20px;
+            font-weight: 800;
+            color: #0a1a3a;
+            margin-bottom: 15px;
+        }
+        .conclusion-block p {
+            margin-bottom: 10px;
+            color: #1a2a4a;
+        }
+        .footer {
+            margin-top: 35px;
+            font-size: 12px;
+            color: #777;
+            border-top: 1px solid #ddd;
+            padding-top: 15px;
+            text-align: center;
+        }
+        @media print {
+            body { background: white; padding: 0.3cm; }
+            .pdf-container { box-shadow: none; padding: 0.2cm; max-width: 100%; border-radius: 0; }
+            .tariff-container { page-break-inside: avoid; }
+            .conclusion-block { page-break-inside: avoid; }
+            tr { page-break-inside: avoid; }
+        }
+        @page { margin: 1.2cm; }
+    </style>
+</head>
+<body>
+    <div class="pdf-container">
+
+        <div class="header-badge">БИЗНЕС-КЕЙС · ОБОСНОВАНИЕ ОБУЧЕНИЯ</div>
+        <h1>Оптимизация финансового моделирования и защита маржинальности: ROI обучения сотрудника</h1>
+        <div class="subhead">
+            Программа «AI-навыки финансиста» (Тариф «Мастер AI») · Для ООО «Газпром Теплоэнерго МО»
+        </div>
+
+        <div class="intro">
+            <strong>Уважаемая Ирина!</strong><br><br>
+            Вы занимаетесь финансовым моделированием в сфере теплоэнергетики, где закупки проходят на конкурсной основе по наименьшей цене. В таких условиях <strong>цена ошибки в расчетах или задержка в принятии решений может стоить компании контракта или убытков</strong>. Это предложение составлено для того, чтобы показать, как инвестиция в обучение окупится за счет снижения рисков, ускорения аналитики и прямой экономии времени компании.
+        </div>
+
+        <div class="stats-row">
+            <div class="stat-box">
+                <div class="number">×5</div>
+                <div class="text">быстрее просчет<br>сценариев</div>
+            </div>
+            <div class="stat-box">
+                <div class="number">-80%</div>
+                <div class="text">рутинных операций<br>в Excel</div>
+            </div>
+            <div class="stat-box">
+                <div class="number">Снижение</div>
+                <div class="text">рисков ошибок<br>в себестоимости</div>
+            </div>
+            <div class="stat-box">
+                <div class="number">1-2 мес.</div>
+                <div class="text">окупаемость<br>инвестиции</div>
+            </div>
+        </div>
+
+        <div class="section-title"><span class="num">01</span> Цена текущих ошибок и рутины для компании</div>
+        <p>Сейчас работа с данными в Excel и 1С отнимает слишком много времени и несет в себе скрытые финансовые риски. Вот как это отражается на бизнесе:</p>
+        
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Проблема</th>
+                        <th>Как это происходит сейчас</th>
+                        <th>Финансовая угроза для компании</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Задержка стратегических решений</strong></td>
+                        <td>Сборка и пересборка актуальной модели занимает дни.</td>
+                        <td>Руководство принимает решения по устаревшим данным, упуская выгодные рыночные возможности.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Риски в тендерах</strong></td>
+                        <td>Из-за жестких сроков нет времени просчитать все сценарии (рост цен на ресурсы, сбои поставок).</td>
+                        <td>Выход на конкурс с ошибочной себестоимостью = <strong>работа в убыток или проигрыш тендера</strong>.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Человеческий фактор</strong></td>
+                        <td>Ручные ссылки в Excel, сведение данных из разных источников.</td>
+                        <td>Ошибка в одной формуле искажает маржинальность всего проекта, что ведет к прямым финансовым потерям.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="value-box">
+            <strong>Ключевая мысль для бизнеса:</strong> Одна вовремя не просчитанная модель или ошибка в тендерной документации стоит компании в разы дороже, чем обучение специалиста, которое эти ошибки предотвращает.
+        </div>
+
+        <div class="section-title"><span class="num">02</span> Что получит бизнес: время и деньги</div>
+        <p>Внедрение ИИ в процессы финансового моделирования дает прямой экономический эффект для компании:</p>
+        <ul>
+            <li><strong>Экономия времени:</strong> Сборка и актуализация моделей (P&L, Cash Flow, Баланс) ускоряется в 5-10 раз. Вместо 1-2 дней на пересборку — 15-20 минут.</li>
+            <li><strong>Многовариантность расчетов:</strong> Появляется возможность просчитывать не 2 базовых сценария, а 10-15. Это позволяет выбрать наиболее безопасную и прибыльную стратегию участия в тендере.</li>
+            <li><strong>Снижение финансовых потерь:</strong> Нейросеть проверяет формулы и находит нестыковки до того, как они попадут в итоговую смету.</li>
+            <li><strong>Освобождение ресурса:</strong> Специалист тратит время не на механический перенос цифр из 1С, а на глубокий анализ экономики и поиск точек роста маржинальности.</li>
+        </ul>
+
+        <div class="section-title"><span class="num">03</span> Инструменты, которые внедрит сотрудник</div>
+        <p>В рамках программы ваш руководитель группы стратегии освоит конкретные решения под задачи компании:</p>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Инструмент / Навык</th>
+                        <th>Прямая выгода для Газпром Теплоэнерго МО</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>FinAILab</strong></td>
+                        <td>Автоматизированный анализ трех отчетов (P&L, Cash Flow, Баланс) за 15-40 минут с готовыми выводами и графиками для руководства.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Сценарное моделирование</strong></td>
+                        <td>Мгновенный пересчет финмоделей под изменяющиеся условия рынка (например, изменение тарифов или стоимости ГСМ).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Создание ИИ-агентов</strong></td>
+                        <td>Цифровые помощники, которые будут автоматически собирать данные и формировать регулярные отчеты по заданным правилам компании.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Работа с Claude и GPT</strong></td>
+                        <td>Обработка больших массивов данных, автоматическая сверка параметров и написание сложных макросов для Excel без ручного кодинга.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section-title"><span class="num">04</span> Рекомендуемый тариф: «Мастер AI»</div>
+        <p>Для руководителя стратегического направления мы рекомендуем максимальный уровень подготовки. Это обеспечивает не только немедленную экономию времени, но и долгосрочную защиту компетенций компании.</p>
+        
+        <div class="tariff-container">
+            <div class="tariff-card">
+                <h2>Тариф «Мастер AI»</h2>
+                <ul>
+                    <li><strong>Доступ на 24 месяца:</strong> нейросети эволюционируют каждые полгода. Вы получаете все будущие обновления курса, чтобы компания всегда использовала самые современные инструменты.</li>
+                    <li><strong>Обучение созданию ИИ-агентов:</strong> позволит настроить автоматизацию рутины под конкретные нужды компании.</li>
+                    <li><strong>Модуль по переговорам и презентациям:</strong> поможет сотруднику еще более аргументированно защищать бюджеты и сложные финмодели перед руководством.</li>
+                    <li><strong>3 месяца в закрытом клубе «Финансист PRO»:</strong> доступ к базе решений сложных кейсов и <strong>«тревожной кнопке»</strong> — если возникнет нетривиальная задача, решение можно найти за пару часов, а не дней.</li>
+                </ul>
+                <div class="price">79 990 ₽</div>
+                <div class="price-desc">Оплата от юридического лица. Полный пакет закрывающих документов, обучение по лицензии.</div>
+            </div>
+        </div>
+
+        <div class="section-title"><span class="num">05</span> Программа обучения (10 модулей)</div>
+        <p>Программа построена от простого к сложному и сразу заточена под реальные задачи финансового специалиста.</p>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Модуль</th>
+                        <th>Что получает компания в итоге</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>1. База эффективной работы</strong></td>
+                        <td>Быстрый вход в нейросети, настройка безопасности данных и промт-инжиниринг.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2. Техническая база (Apps Script)</strong></td>
+                        <td>Автоматизация рутины в Google Таблицах без участия программистов.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>3. Работа с документами</strong></td>
+                        <td>Быстрый разбор договоров, транскрибация совещаний и создание регламентов.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>4. Формулы и данные</strong></td>
+                        <td>Сложные расчеты и обработка баз данных 1С в разы быстрее.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>5. Дашборды и визуализация</strong></td>
+                        <td>Настройка управленческой отчетности, понятной для руководства.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>6. Автоматизация учета</strong></td>
+                        <td>Внедрение Telegram-ботов и снижение ручной нагрузки на учет.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>7. Бюджетирование</strong></td>
+                        <td>Планирование с учетом множества факторов и мгновенный план-факт анализ.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>8. FinAILab</strong></td>
+                        <td>Глубокий анализ P&L, Cash Flow и Баланса за минуты (вместо 8 часов).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>9. Маркетинг и контент</strong></td>
+                        <td>Упаковка сложных финансовых идей в понятные презентации для акционеров.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>10. Продажи и переговоры</strong></td>
+                        <td>Навык аргументации и защиты своих расчетов перед топ-менеджментом.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section-title"><span class="num">06</span> Клуб «Финансист PRO» (в составе тарифа)</div>
+        <p>Помимо доступа к урокам, на 3 месяца сотрудник получает доступ в закрытое сообщество <a href="https://fin-academy.pro/club_pro" target="_blank">«Финансист PRO»</a>. Для компании это означает:</p>
+        <ul>
+            <li><strong>Повышение экспертизы:</strong> доступ к базе из 130+ эфиров по сложным налоговым схемам, управленческому учету и финмоделированию.</li>
+            <li><strong>Решение нетривиальных задач:</strong> «Тревожная кнопка» позволяет в срочном режиме получить помощь от ведущих экспертов, если в процессе работы возникнет сложная ситуация.</li>
+            <li><strong>Нетворкинг:</strong> обмен опытом с коллегами CFO-уровня из других компаний, что позволяет привносить в бизнес лучшие рыночные практики.</li>
+        </ul>
+
+        <div class="section-title"><span class="num">07</span> ROI: Окупаемость инвестиций</div>
+        <p>Стоимость обучения по тарифу «Мастер AI» составляет 79 990 ₽. Давайте посмотрим на эту цифру в контексте бизнеса:</p>
+        <ul>
+            <li>Если ИИ поможет <strong>выиграть хотя бы один тендер</strong> за счет более точного расчета себестоимости, прибыль компании окупит это обучение в десятки раз.</li>
+            <li>Если автоматизация сэкономит специалисту хотя бы <strong>10 часов в месяц</strong>, это высвободит более 120 часов стратегической работы в год, что напрямую влияет на качество принимаемых управленческих решений.</li>
+            <li>Снижение риска ошибки в одной Excel-таблице экономит компании <strong>потенциальные штрафы и убытки</strong>.</li>
+        </ul>
+
+        <div class="conclusion-block">
+            <h2>Решение для бизнеса</h2>
+            <p>Инвестировать <strong>79 990 ₽</strong> в обучение руководителя группы стратегии для внедрения ИИ-инструментов в процессы финансового моделирования. Это обеспечит компании скорость реакции на изменения рынка, снижение рисков ошибок в тендерах и освобождение времени специалиста для более глубокой аналитики.</p>
+            <p>Мы готовы заключить договор с ООО «Газпром Теплоэнерго МО», предоставить все закрывающие документы через ЭДО и начать обучение в ближайшее время.</p>
+        </div>
+
+        <div class="footer">
+            © Онлайн-школа «Мастер CFO» · 2026 г. · Лицензия № Л035-01213-63/00977748
+        </div>
+
+    </div>
+</body>
+</html>
